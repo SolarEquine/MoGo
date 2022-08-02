@@ -323,6 +323,14 @@ a{
     z-index: 2;
     transform: translate3d(0, -50%, 0);
     transition: opacity .1s linear;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about__text img{
+    width: 32px;
+    margin: 0 auto;
 }
 
 .about__item:hover .about__text{
