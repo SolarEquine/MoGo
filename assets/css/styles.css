@@ -957,7 +957,7 @@ hr{
 
 .footer{
     background-color: #f8f8f8;
-    padding: 50px 0;
+    padding-top: 50px;
 }
 
 .footer__inner{
@@ -1097,6 +1097,15 @@ hr{
     font-weight: 300;
     font-style: italic;
     color: #999;
+}
+
+.footer__outer{
+    border-top: 1px #e5e5e5 solid;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    padding: 20px;
 }
 
 /* Photos */
