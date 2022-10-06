@@ -41,7 +41,8 @@ hr{
 
 .container{
     width:100%;
-    max-width: 1200px;
+    max-width: 1230px;
+    padding: 0 15px;
     margin:0 auto;
 }
 
@@ -160,7 +161,7 @@ hr{
 }
 
 .intro__title{
-    font-size: 150px;
+    font-size: 7vw;
     font-weight: 700;
     
     text-transform: uppercase;
@@ -179,7 +180,7 @@ hr{
 
 .intro__suptitle{
     font-family: "Kaushan Script", cursive;
-    font-size: 72px;
+    font-size: 4vw;
     text-align: center;
 }
 
@@ -955,13 +956,215 @@ hr{
 /* Footer */
 
 .footer{
-    text-align: center;
     background-color: #f8f8f8;
-    padding: 25px 0;
-    font-size: 14px;
-    font-weight: 400;
+    padding: 50px 0;
 }
 
-.footer__name{
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer__col_first{
+    width: 40%;
+}
+
+.footer__col_second{
+    width: 30%;
+    margin-top: 20px;
+}
+
+.footer__col_third{
+    width: 22%;
+    margin-top: 20px;   
+}
+
+.footer__logo{
+    font-size: 46px;
+    font-weight: 700;
+    color:#ccc;
+    margin-bottom: 40px;
+}
+
+.footer__text{
+    font-size: 15px;
+    color: #999;
+    margin-bottom: 50px;
+}
+
+.footer__social{
+    margin-bottom: 25px;
+}
+
+.footer__social_header{
+    font-size: 14px;
+    color: #333;
+    padding-bottom: 20px;
+    border-bottom: 1px #e5e5e5 solid;
+    margin-bottom: 20px;
+}
+
+.footer__social_header b{
+    font-size: 18px;
+}
+
+
+.footer__social_content{
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    color: #999;
+}
+
+.footer__social_content .fa-brands{
+    margin-left: 15px;
+    color: #95e1d3;
+}
+
+.footer__col__header{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.footer__blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 340px;
+}
+
+.footer__blog__item{
+    margin-bottom: 35px;
+    display: flex;
+}
+
+.footer__blog__item:last-child{
+    margin-bottom: 0;
+}
+
+.footer__blog__img{
+    margin-right: 20px;
+}
+
+.footer__blog__img img{
+    height: 80px;
+    width: 120px;
+    transition: .2s linear;
+}
+
+.footer__blog__img:hover img{
+    transform: scale(1.1);
+}
+
+.footer__blog__desc{
+    margin-top: 15px;
+}
+
+.footer__blog__text{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    transition: .2s linear;
+}
+
+.footer__blog__text:hover{
     color: #f38181;
+}
+
+
+.footer__blog__date{
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 13px;
+    color: #999;
+}
+
+.footer__photos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    margin-bottom: 20px;
+}
+
+.footer__instagram__text{
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;
+    color: #999;
+}
+
+/* Photos */
+
+.photo__item{
+    font-size: 0;
+}
+
+.photo__item img{
+    transition: .2s linear;
+}
+
+.photo__item img:hover{
+    transform: scale(1.1);
+}
+
+
+/* Subscribe */
+
+.subscribe{
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+}
+
+.subscribe__text{
+    width: 60%;
+    height: 40px;
+    border: 1px #e5e5e5 solid;
+    border-right: white;
+    padding: 0 20px;
+    font-size: 15px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: italic;
+    color: #333;
+}
+
+.subscribe__text::placeholder{
+    color: #ccc;
+}
+
+.subscribe__text:focus{
+    outline: 0;
+    border-color: #95e1d3;
+}
+
+.subscribe__button{
+    height: 40px;
+    width: 40%;
+    background-color: #95e1d3;
+    border: none;
+    color: #fff;
+    font-family: Montserrat;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+    transition: .1s linear;
+    cursor: pointer;
+}
+
+.subscribe__button:hover{
+    color: #95e1d3;
+    background-color: #fff;
+}
+
+.subscribe__button:focus{
+    outline: 0;
 }
