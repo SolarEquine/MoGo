@@ -161,7 +161,7 @@ hr{
 }
 
 .intro__title{
-    font-size: 7vw;
+    font-size: 150px;
     font-weight: 700;
     
     text-transform: uppercase;
@@ -180,7 +180,7 @@ hr{
 
 .intro__suptitle{
     font-family: "Kaushan Script", cursive;
-    font-size: 4vw;
+    font-size: 75px;
     text-align: center;
 }
 
@@ -251,7 +251,7 @@ hr{
 .slider__item.active::before{
     content: "";
     display: block;
-    width:70px;
+    width:25%;
     height:3px;
     background-color: #f38181;
     position: absolute;
@@ -304,6 +304,15 @@ hr{
     color: #999;
 }
 
+.section--devices {
+    margin-bottom: 40px;
+    padding-bottom: 0;
+
+    background: url("../img/Devices/bg.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
 .section_works{
     padding-bottom: 0;
 }
@@ -332,20 +341,12 @@ hr{
 .card{
     display:flex;
     justify-content: space-between;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .card__item{
     width: 33%;
-    margin: 0 15px;
-}
-
-.card__item:first-child{
-    margin: 0 15px 0 0;
-}
-
-.card__item:last-child{
-    margin: 0 0 0 15px;
+    padding: 0 15px;
 }
 
 .card__inner {
@@ -354,7 +355,7 @@ hr{
     position: relative;
 }
 
-.card__inner:hover .card__img{
+.card__inner:hover .card__movable{
     transform: translate3d(-10px, -10px, 0);
 }
 
@@ -362,7 +363,7 @@ hr{
     opacity: .1;
 }
 
-.card__img{
+.card__movable{
     background: linear-gradient(to bottom, #f38181, #fce38a);
     transition: transform .1s linear;
 }
@@ -370,7 +371,7 @@ hr{
 .card__img img{
     display: block;
     transition: opacity .1s linear;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 
 }
@@ -432,6 +433,7 @@ hr{
 
 .stat__items{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stat__item:last-child{
@@ -462,13 +464,18 @@ hr{
 
 .services{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .services__item{
-    flex: 1 1 0;
-    padding-left: 90px;
-    padding-right: 40px;
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
     position: relative;
+    margin-bottom: 40px;
+}
+
+.services__item--border{
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .services__icon{
@@ -494,14 +501,6 @@ hr{
 
 /* Devices */
 
-#devices{
-    background: url("../img/Devices/bg.png") center no-repeat;
-    background-size: cover;
-    min-height: 850px;
-    padding-bottom: 0;
-    margin-bottom: 20px;
-}
-
 .devices{
     width: 100%;
     max-width: 600px;
@@ -510,27 +509,36 @@ hr{
     padding: 0;
 }
 
-.devices__ipad{
+.devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-.devices__iphone{
-    display: block;
+.devices__item--iphone {
     position: absolute;
-    bottom: -90px;
-    right: -80px;
+    bottom: -80px;
+    right: 0;
     z-index: 1;
 }
+
 
 /* We Do */
 
 .wedo{
     display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
 }
 
 .wedo__item{
-    flex: 1 1 0;
-    margin-right: 15px;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.wedo__img{
+    max-width: 100%;
+    height: auto;
 }
 
 .wedo__item:last-child{
@@ -1099,15 +1107,6 @@ hr{
     color: #999;
 }
 
-.footer__outer{
-    border-top: 1px #e5e5e5 solid;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    padding: 20px;
-}
-
 /* Photos */
 
 .photo__item{
@@ -1176,4 +1175,199 @@ hr{
 
 .subscribe__button:focus{
     outline: 0;
+}
+
+/* Copyright */
+.copyright{
+    border-top: 1px #e5e5e5 solid;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    padding: 20px;
+}
+
+.copyright span {
+    color:#f38181;
+}
+
+@media (max-width: 1230px){
+    /* Intro */
+    .intro__title{
+        font-size: 120px;
+    }
+    .intro__suptitle{
+        font-size: 52px;
+    }
+
+    
+}
+
+@media (max-width: 990px){
+        /* Intro */
+        .intro__title{
+            font-size: 80px;
+        }
+        .intro__suptitle{
+            font-size: 52px;
+        }
+
+        /* Stat */
+
+        .stat__items{
+            justify-content: center;
+        }
+
+        .stat__item{
+            flex: none;
+            width: 33.33%;
+            border: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .stat__item:last-child{
+            border: 0;
+        }
+
+        /* Services */
+        .services__item{
+            width: 50%;
+        }
+
+        .services__item--border{
+            border: 0;
+        }
+}
+
+@media (max-width: 770px){
+    /* Menu */
+    .menu{
+        display: none;
+    }
+    /* Slider */
+    .slider_text{
+        display: none;
+    }
+    .slider__item.active:before{
+        width: 50%;
+    }
+
+    /* Section */
+    .section{
+        padding: 45px 0 55px 0;
+    }
+    .section__header{
+        margin-bottom: 50px;
+    }
+
+    #device{
+        padding-bottom: 0;
+    }
+
+    /* Card */
+
+    .card{
+        justify-content: center;
+    }
+
+    .card__item{
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+    }
+    .card__item:last-child{
+        margin-bottom: 0px;
+    }
+
+    /* Services */
+
+    .services{
+        justify-content: center;
+    }
+
+    .services__item{
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services__icon{
+        left: 0;
+    }
+
+    .services__text{
+        max-width: 400px;
+    }
+
+    .section--devices{
+        padding-bottom: 0;
+    }
+
+    /* We Do */
+
+    .wedo__img{
+        display: none;
+    }
+
+    .wedo__item{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 575px){
+    /* Intro */
+    .intro__title{
+        font-size: 40px;
+    }
+    .intro__suptitle{
+        font-size: 22px;
+    }
+
+    /* Section */
+
+    .section__header{
+        margin: 0 auto 45px;
+    }
+
+    .section__title{
+        font-size: 24px;
+    }
+
+    .section__suptitle{
+        font-size: 20px;
+    }
+
+    .section__title:after{
+        margin: 15px auto 25px;
+    }
+
+    /* Stat */
+
+    .stat__item{
+        width: 100%;
+        border-bottom: #b5eae0 1px solid;
+    }
+
+    .stat__item:last-child{
+        border: 0;
+    }
+
+    .stat__num{
+        font-size: 52px;
+    }
+
+    /* Devices */
+
+    .devices{
+        max-width: 320px;
+    }
+
+    .devices__item--iphone{
+        width: 180px;
+        right: -80px;
+        bottom: -50px;
+    }
 }

@@ -47,10 +47,11 @@
             <div class="slider">
                 <div class="container">
                     <div class="slider__inner">
-                        <div class="slider__item active"><span class="slider__number">01 </span>Intro</div>
-                        <div class="slider__item"><span class="slider__number">02 </span>Work</div>
-                        <div class="slider__item"><span class="slider__number">03 </span>About</div>
-                        <div class="slider__item"><span class="slider__number">04 </span>Contacts</div>    
+                        <div class="slider__item active"><span class="slider__number">01 </span>
+                            <span class="slider_text">Intro</span></div>
+                        <div class="slider__item"><span class="slider__number">02 </span><span class="slider_text">Work</span></div>
+                        <div class="slider__item"><span class="slider__number">03 </span><span class="slider_text">About</span></div>
+                        <div class="slider__item"><span class="slider__number">04 </span><span class="slider_text">Contacts</span></div>    
                     </div>
                 </div>
             </div>
@@ -72,34 +73,40 @@
                     <div class="card">
                         <div class="card__item">
                             <div class="card__inner">
-                                <div class="card__img">
-                                    <img src="assets/img/About/1.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    <img src="assets/img/About/users.png" alt="">
-                                    <h2>Super team</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card__item">
-                            <div class="card__inner">
-                                <div class="card__img">
-                                    <img src="assets/img/About/2.png" alt="">
-                                </div>
-                                <div class="card__text">
-                                    <img src="assets/img/About/users.png" alt="">
-                                    <h2>Super team</h2>
+                                <div class="card__movable">
+                                    <div class="card__img">
+                                        <img src="assets/img/About/1.png" alt="">
+                                    </div>
+                                    <div class="card__text">
+                                        <img src="assets/img/About/users.png" alt="">
+                                        <h2>Super team</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card__item">
                             <div class="card__inner">
-                                <div class="card__img">
-                                    <img src="assets/img/About/3.png" alt="">
+                                <div class="card__movable">
+                                    <div class="card__img">
+                                        <img src="assets/img/About/2.png" alt="">
+                                    </div>
+                                    <div class="card__text">
+                                        <img src="assets/img/About/users.png" alt="">
+                                        <h2>Super team</h2>
+                                    </div>
                                 </div>
-                                <div class="card__text">
-                                    <img src="assets/img/About/users.png" alt="">
-                                    <h2>Super team</h2>
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="card__inner">
+                                <div class="card__movable">
+                                    <div class="card__img">
+                                        <img src="assets/img/About/3.png" alt="">
+                                    </div>
+                                    <div class="card__text">
+                                        <img src="assets/img/About/users.png" alt="">
+                                        <h2>Super team</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -143,24 +150,21 @@
                         <div class="section__title">Amazing Services</div>
                     </div>
                     <div class="services">
-                        <div class="services__item">
+                        <div class="services__item services__item--border services__item--tablet_border">
                             <img class="services__icon" src="assets/img/Services/alarm.png" alt="Photography">
                             <div class="services__title">Photography</div>
                             <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                         </div>
-                        <div class="services__item">
+                        <div class="services__item services__item--border services__item--tablet_border">
                             <img class="services__icon" src="assets/img/Services/graph.png" alt="Web Design">
                             <div class="services__title">Web Design</div>
                             <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                         </div>
-                        <div class="services__item">
+                        <div class="services__item services__item--border services__item--tablet_border">
                             <img class="services__icon" src="assets/img/Services/screen.png" alt="Creativity">
                             <div class="services__title">Creativity</div>
                             <div class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="services">
                         <div class="services__item">
                             <img class="services__icon" src="assets/img/Services/book.png" alt="SEO">
                             <div class="services__title">SEO</div>
@@ -180,7 +184,7 @@
                 </div> <!--Container end-->
             </div><!-- Services end-->
 
-            <div class="section" id="devices">
+            <div class="section section--devices">
                 <div class="container">
                     <div class="section__header">
                         <div class="section__suptitle">For all devices</div>
@@ -188,8 +192,8 @@
                     </div>
 
                     <div class="devices">
-                        <img src="assets/img/Devices/ipad.png" alt="" class="devices__ipad">
-                        <img src="assets/img/Devices/iphone.png" alt="" class="devices__iphone">
+                        <img src="assets/img/Devices/ipad.png" alt="" class="devices__item">
+                        <img src="assets/img/Devices/iphone.png" alt="" class="devices__item devices__item--iphone">
                     </div>
 
                 </div>
@@ -836,8 +840,8 @@
                         </div>
                     </div>
                 </div><!-- Footer inner end-->
-                <div class="footer__outer">
-                    © 2016 MoGo free PSD template by <span style="color: #f38181"><a href="#">Laaqiqs</a></span>
+                <div class="copyright">
+                    © 2016 MoGo free PSD template by <span><a href="#">Laaqiqs</a></span>
                 </div>
             </div> <!-- Container end-->
         </footer>
