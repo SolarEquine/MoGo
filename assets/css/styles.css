@@ -64,6 +64,13 @@ hr{
     padding-top: 25px;
 }
 
+.header.fixed{
+    position: fixed;
+    padding: 10px 0;
+    background-color: #f38181;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
 .header__inner{
     display: flex;
     justify-content: space-between;
@@ -140,12 +147,50 @@ hr{
     background-color: #fce38a;
 }
 
+/* Burger Menu */
+.burger-menu{
+    width: 30px;
+    padding: 8px 0 9px 0;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.burger-menu__item{
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #fff;
+    position: relative;
+
+}
+
+.burger-menu__item:before,
+.burger-menu__item:after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.burger-menu__item:before{
+    top: -8px;
+}
+.burger-menu__item:after{
+    bottom: -8px;
+}
+
 /* Intro */
 .intro{
     background: url("../img/bg_image.png") center no-repeat ;
     background-size: cover;
     width:100%;
     height: 100vh;
+    min-height: 820px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -219,7 +264,7 @@ hr{
     bottom: 0;
     left:0;
     right:0;
-    z-index: 1000;
+    z-index: 500;
     color: #fff;
 }
 
@@ -266,6 +311,7 @@ hr{
 
 .section_grey{
     background-color: #f8f8f8;
+    padding: 70px 0;
 }
 
 .section__header{
@@ -641,15 +687,15 @@ hr{
 }
 
 .reviews__item{
-    padding-left: 320px;
+    padding: 0 50px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .reviews__photo{
-    position: absolute;
-    top: 0;
-    left: 110px;
-    z-index: 1;
+    padding: 0 30px;
 }
 
 .reviews__text{
@@ -699,13 +745,13 @@ hr{
 /* Logos */
 
 .logos{
-    padding: 70px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.logos__img{
-    max-width: 100%;
-    height: auto;
-}
+
 
 /* Social */
 
@@ -1244,7 +1290,44 @@ hr{
     /* Menu */
     .menu{
         display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        background-color: #f38181;
+        left: 0;
+        padding: 0 20px;
     }
+
+    .menu.active{
+        display: block;
+    }
+
+    .menu__item{
+        display: block;
+        margin: 0 0 20px 0;
+    }
+
+    .menu__item:first-child{
+        margin: 0 0 20px 0;
+    }
+
+    .menu__item:last-child{
+        margin: 0 0 20px 0;
+    }
+    
+    .menu__item:nth-child(6){
+        margin: 0 0 20px 0;
+    }
+
+    /* Burger Menu */
+    .burger-menu{
+        display: block;
+    }
+    /* Intro */
+    .intro{
+        min-height: 650px;  
+    }
+
     /* Slider */
     .slider_text{
         display: none;
@@ -1315,6 +1398,26 @@ hr{
         width: 100%;
     }
 
+    /* Logos */
+
+    .logos{
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    .logos__img{
+        width: 33.333%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logos__img:first-child,
+    .logos__img:nth-child(2),
+    .logos__img:nth-child(3){
+        margin-bottom: 30px;
+    }
+
 }
 
 @media (max-width: 575px){
@@ -1369,5 +1472,26 @@ hr{
         width: 180px;
         right: -80px;
         bottom: -50px;
+    }
+
+    /* Reviews */
+
+    .reviews__item{
+        flex-direction: column;
+    }
+
+    /* Logos */
+
+    .logos{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .logos__img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .logos__img:last-child{
+        margin-bottom: 0;
     }
 }
