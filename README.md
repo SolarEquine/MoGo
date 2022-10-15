@@ -4,6 +4,6 @@
 Лендинг сделан по шаблону с сайта [psd-html-css.ru](http://psd-html-css.ru/templates/mogo-besplatnyy-psd-shablon-lendingovoy-stranicy)
 ***
 # ToDo
-- Доверстать макет
-- Сделать его адаптивным
+- ~~Доверстать макет~~
+- ~~Сделать его адаптивным~~
 - Добавить интерактивность с помощью JQuery
