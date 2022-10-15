@@ -1,3 +1,7 @@
+body, html{
+    overflow-x: hidden;
+}
+
 body{
     margin: 0;
     font-family: Montserrat, sans-serif;
@@ -35,7 +39,7 @@ hr{
 .wrapper{
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    
 }
 
 /* Container */
@@ -554,6 +558,7 @@ hr{
     margin: 0 auto;
     position: relative;
     padding: 0;
+    
 }
 
 .devices__item {
