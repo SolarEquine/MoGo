@@ -30,7 +30,6 @@ function moveSlider(target){
     const slider = review.querySelector(".reviews__slider");
     if (direction == 1){
         slider.style.transform = "translateX(-100%)";
-        slider.style.justifyContent = "flex-start";
 
         setTimeout(()=>{
             slider.appendChild(slider.firstElementChild);
