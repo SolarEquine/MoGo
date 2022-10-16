@@ -34,7 +34,6 @@ function moveSlider(target){
 
         setTimeout(()=>{
             slider.appendChild(slider.firstElementChild);
-            slider.style.transform = "translateX(0)";
             
             slider.style.transition = "none";
             slider.style.transform = "translateX(0)";
