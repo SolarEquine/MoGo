@@ -1,7 +1,6 @@
 "use strict"
 const burger = document.querySelector(".burger-menu");
 const menu = document.querySelector(".menu");
-const sliders = document.querySelectorAll(".reviews__slider");
 let direction =0;
 
 const wrapper = document.querySelector(".wrapper");
@@ -18,8 +17,8 @@ function toggleBurger(){
 }
 
 function toggleAccordion(target){
-    accordion = target.parentNode.parentNode;
-    accordionItems = accordion.querySelectorAll(".accordion__item");
+    const accordion = target.parentNode.parentNode;
+    const accordionItems = accordion.querySelectorAll(".accordion__item");
     accordionItems.forEach(item => {
         item.classList.remove("active");
     });
@@ -63,6 +62,10 @@ wrapper.addEventListener("click", (event)=>{
     }
     if (event.target.closest(".accordion__header")){
         toggleAccordion(event.target);
+    }
+
+    if (event.target.closest(".accordion__icon") || event.target.closest(".accordion__title") || event.target.closest(".accordion__arrow")){
+        toggleAccordion(event.target.parentNode.parentNode);
     }
 
     if(event.target.closest(".reviews__btn_prev")){
