@@ -33,12 +33,13 @@ function moveSlider(target){
 
         setTimeout(()=>{
             slider.appendChild(slider.firstElementChild);
-            
-            slider.style.transition = "none";
-            slider.style.transform = "translateX(0)";
-            setTimeout(()=>{
-              slider.style.transition = "all .2s";
-            }, 1);
+                slider.style.transition = "none";
+                slider.style.transform = "translateX(0)";
+
+                setTimeout(()=>{
+                    slider.style.transition = "all .2s";
+                  }, 100);
+
         }, 200);
 
     }
