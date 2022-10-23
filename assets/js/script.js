@@ -25,23 +25,25 @@ function toggleAccordion(target){
     target.parentNode.classList.add("active");
 }
 
+function sliderAppend(event){
+    if(direction === 1 ){
+        const slider = event.target;
+        slider.style.transition = "none";
+        slider.appendChild(slider.firstElementChild);
+        slider.style.transform = "translateX(0)";
+        setTimeout(()=>{
+            slider.style.transition = "all .2s linear";
+        }, 1)
+    }
+
+}
+
 function moveSlider(target){
     const review = target.parentNode.parentNode;
     const slider = review.querySelector(".reviews__slider");
     if (direction == 1){
+        slider.addEventListener("transitionend", sliderAppend);
         slider.style.transform = "translateX(-100%)";
-
-        setTimeout(()=>{
-            slider.appendChild(slider.firstElementChild);
-                slider.style.transition = "none";
-                slider.style.transform = "translateX(0)";
-
-                setTimeout(()=>{
-                    slider.style.transition = "all .2s";
-                  }, 100);
-
-        }, 200);
-
     }
     else{
         slider.prepend(slider.lastElementChild);
